@@ -176,8 +176,8 @@ class Scratch3ScratchJrBlocks {
                 {
                     opcode: 'whenMakeyKeyPressed',
                     text: formatMessage({
-                        id: 'makeymakey.whenKeyPressed',
-                        default: 'when [KEY] key pressed',
+                        id: 'scratchjr.whenKeyPressed',
+                        default: '[KEY]',
                         description: 'when a keyboard key is pressed'
                     }),
                     blockType: BlockType.HAT,
@@ -188,12 +188,12 @@ class Scratch3ScratchJrBlocks {
                             defaultValue: KEY_ID_SPACE
                         }
                     }
-                },
+                }/*,
                 {
                     opcode: 'whenCodePressed',
                     text: formatMessage({
-                        id: 'makeymakey.whenKeysPressedInOrder',
-                        default: 'when [SEQUENCE] pressed in order',
+                        id: 'scratchjr.whenKeysPressedInOrder',
+                        default: '[SEQUENCE] pressed in order',
                         description: 'when a sequence of keyboard keys is pressed in a specific order'
                     }),
                     blockType: BlockType.HAT,
@@ -204,56 +204,56 @@ class Scratch3ScratchJrBlocks {
                             defaultValue: this.DEFAULT_SEQUENCES[0]
                         }
                     }
-                }
+                }*/
             ],
             menus: {
                 KEY: [
                     {
                         text: formatMessage({
-                            id: 'makeymakey.spaceKey',
-                            default: 'space',
+                            id: 'scratchjr.spaceKey',
+                            default: 'SPACE',
                             description: 'The space key on a computer keyboard.'
                         }),
                         value: KEY_ID_SPACE
                     },
                     {
                         text: formatMessage({
-                            id: 'makeymakey.upArrow',
-                            default: 'up arrow',
+                            id: 'scratchjr.upArrow',
+                            default: 'UP',
                             description: 'The up arrow key on a computer keyboard.'
                         }),
                         value: KEY_ID_UP
                     },
                     {
                         text: formatMessage({
-                            id: 'makeymakey.downArrow',
-                            default: 'down arrow',
+                            id: 'scratchjr.downArrow',
+                            default: 'DOWN',
                             description: 'The down arrow key on a computer keyboard.'
                         }),
                         value: KEY_ID_DOWN
                     },
                     {
                         text: formatMessage({
-                            id: 'makeymakey.rightArrow',
-                            default: 'right arrow',
+                            id: 'scratchjr.rightArrow',
+                            default: 'RIGHT',
                             description: 'The right arrow key on a computer keyboard.'
                         }),
                         value: KEY_ID_RIGHT
                     },
                     {
                         text: formatMessage({
-                            id: 'makeymakey.leftArrow',
-                            default: 'left arrow',
+                            id: 'scratchjr.leftArrow',
+                            default: 'LEFT',
                             description: 'The left arrow key on a computer keyboard.'
                         }),
                         value: KEY_ID_LEFT
                     },
-                    {text: 'w', value: 'w'},
-                    {text: 'a', value: 'a'},
-                    {text: 's', value: 's'},
-                    {text: 'd', value: 'd'},
-                    {text: 'f', value: 'f'},
-                    {text: 'g', value: 'g'}
+                    {text: 'W', value: 'w'},
+                    {text: 'A', value: 'a'},
+                    {text: 'S', value: 's'},
+                    {text: 'D', value: 'd'},
+                    {text: 'F', value: 'f'},
+                    {text: 'G', value: 'g'}
                 ],
                 SEQUENCE: this.buildSequenceMenu(this.DEFAULT_SEQUENCES)
             }
