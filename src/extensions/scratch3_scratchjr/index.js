@@ -953,11 +953,11 @@ class Scratch3MusicBlocks {
             blockIconURI: blockIconURI,
             blocks: [
                {
-                    opcode: 'whenKeyPressed',
+                    opcode: 'whenKeyPressedS',
                     text: formatMessage({
-                        id: 'scratchjr.whenKeyPressed',
-                        default: '[KEY]',
-                        description: 'when a keyboard key is pressed'
+                        id: 'scratchjr.whenKeyPressedS',
+                        default: '❑ [KEY]',
+                        description: 'when a Space Key is pressed'
                     }),
                     blockType: BlockType.HAT,
                     arguments: {
@@ -969,10 +969,10 @@ class Scratch3MusicBlocks {
                     }
                 },
 		{
-                    opcode: 'whenKeyPressed',
+                    opcode: 'whenKeyPressedU',
                     text: formatMessage({
-                        id: 'scratchjr.whenKeyPressed',
-                        default: '[KEY]',
+                        id: 'scratchjr.whenKeyPressedU',
+                        default: '❑ ▲ [KEY]',
                         description: 'when a UP keyboard key is pressed'
                     }),
                     blockType: BlockType.HAT,
@@ -985,10 +985,10 @@ class Scratch3MusicBlocks {
                     }
                 },
 		{
-                    opcode: 'whenKeyPressed',
+                    opcode: 'whenKeyPressedD',
                     text: formatMessage({
-                        id: 'scratchjr.whenKeyPressed',
-                        default: '[KEY]',
+                        id: 'scratchjr.whenKeyPressedD',
+                        default: '❑ ▼ [KEY]',
                         description: 'when a DOWN keyboard key is pressed'
                     }),
                     blockType: BlockType.HAT,
@@ -1001,10 +1001,10 @@ class Scratch3MusicBlocks {
                     }
                 },
 		{
-                    opcode: 'whenKeyPressed',
+                    opcode: 'whenKeyPressedR',
                     text: formatMessage({
-                        id: 'scratchjr.whenKeyPressed',
-                        default: '[KEY]',
+                        id: 'scratchjr.whenKeyPressedR',
+                        default: '❑ ▶ [KEY]',
                         description: 'when a RIGHT keyboard key is pressed'
                     }),
                     blockType: BlockType.HAT,
@@ -1017,10 +1017,10 @@ class Scratch3MusicBlocks {
                     }
                 },
 		{
-                    opcode: 'whenKeyPressed',
+                    opcode: 'whenKeyPressedL',
                     text: formatMessage({
-                        id: 'scratchjr.whenKeyPressed',
-                        default: '[KEY]',
+                        id: 'scratchjr.whenKeyPressedL',
+                        default: '❑ ◀ [KEY]',
                         description: 'when a LEFT keyboard key is pressed'
                     }),
                     blockType: BlockType.HAT,
@@ -1031,33 +1031,13 @@ class Scratch3MusicBlocks {
                             defaultValue: KEY_ID_LEFT
                         }
                     }
-                },/*
-		{
-                    opcode: 'playDrumForBeats',
-                    blockType: BlockType.COMMAND,
-                    text: formatMessage({
-                        id: 'scratchjr.playDrumForBeats',
-                        default: '[DRUM] FOR [BEATS]',
-                        description: 'play drum sample for a number of beats'
-                    }),
-                    arguments: {
-                        DRUM: {
-                            type: ArgumentType.NUMBER,
-                            menu: 'DRUM',
-                            defaultValue: 1
-                        },
-                        BEATS: {
-                            type: ArgumentType.NUMBER,
-                            defaultValue: 0.25
-                        }
-                    }
-                },*/
+                },
 		{
                     opcode: 'playDrumForFixedBeats',
                     blockType: BlockType.COMMAND,
                     text: formatMessage({
                         id: 'scratchjr.playDrumForFixedBeats',
-                        default: '[DRUM]',
+                        default: '♬ [DRUM]',
                         description: 'play drum sample for a number of beats'
                     }),
                     arguments: {
@@ -1067,6 +1047,141 @@ class Scratch3MusicBlocks {
                             defaultValue: 1
                         }
                     }
+                },
+		{
+                    opcode: 'hideScratchJr',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'scratchjr.hideScratchJr',
+                        default: '◌',
+                        description: 'hide'
+                    }),
+                    arguments: {
+			STEPS: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 20
+                        }
+		    }
+                },
+		{
+                    opcode: 'moveScratchJrF',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'scratchjr.moveScratchJrF',
+                        default: '▶',
+                        description: 'move forward'
+                    }),
+                    arguments: {
+			STEPS: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 20
+                        }
+		    }
+                },
+		{
+                    opcode: 'moveScratchJrB',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'scratchjr.moveScratchJrB',
+                        default: '◀',
+                        description: 'move backward'
+                    }),
+                    arguments: {
+			STEPS: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: -20
+                        }
+		    }
+                },
+		{
+                    opcode: 'moveScratchJrU',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'scratchjr.moveScratchJrU',
+                        default: '▲',
+                        description: 'move up'
+                    }),
+                    arguments: {
+			STEPS: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 20
+                        }
+		    }
+                },
+		{
+                    opcode: 'moveScratchJrD',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'scratchjr.moveScratchJrD',
+                        default: '▼',
+                        description: 'move down'
+                    }),
+                    arguments: {
+			STEPS: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: -20
+                        }
+		    }
+                },
+		{
+                    opcode: 'rotateScratchJrD',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'scratchjr.rotateScratchJrD',
+                        default: '⤵',
+                        description: 'rotate right'
+                    }),
+                    arguments: {
+			STEPS: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: -20
+                        }
+		    }
+                },
+		{
+                    opcode: 'rotateScratchJrL',
+                    blockType: BlockType.COMMAND,
+                    text: formatMessage({
+                        id: 'scratchjr.rotateScratchJrL',
+                        default: '⤴',
+                        description: 'rotate left'
+                    }),
+                    arguments: {
+			STEPS: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: -20
+                        }
+		    }
+                },
+		{
+                    opcode: 'loopScratchJr',
+                    blockType: BlockType.LOOP,
+                    text: formatMessage({
+                        id: 'scratchjr.loopScratchJr',
+                        default: '↺ [TIMES]',
+                        description: 'repeat'
+                    }),
+                    arguments: {
+			TIMES: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 2
+                        }
+		    }
+                },
+		{
+                    opcode: 'loopInfScratchJr',
+                    blockType: BlockType.LOOP,
+                    text: formatMessage({
+                        id: 'scratchjr.loopInfScratchJr',
+                        default: '∞',
+                        description: 'repeat forever'
+                    }),
+                    arguments: {
+			TIMES: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 2
+                        }
+		    }
                 }
             ],
             menus: {
@@ -1592,7 +1707,7 @@ class Scratch3MusicBlocks {
      * @property {number} KEY - a key code.
      * @param {object} util - utility object provided by the runtime.
      */
-    whenKeyPressed (args, util) {
+     whenKeyPressedU (args, util) {
         let key = args.KEY;
         // Convert the key arg, if it is a KEY_ID, to the key name used by
         // the Keyboard io module.
@@ -1601,18 +1716,9 @@ class Scratch3MusicBlocks {
         }
         const isDown = util.ioQuery('keyboard', 'getKeyIsDown', [key]);
         return (isDown && this.frameToggle);
-    }
-
-     /*
-     * Check whether a keyboard key is currently pressed.
-     * Also, toggle the results of the test on alternate frames, so that the
-     * hat block fires repeatedly.
-     * @param {object} args - the block arguments.
-     * @property {number} KEY - a key code.
-     * @param {object} util - utility object provided by the runtime.
-     */
-    whenSpaceKeyPressed (args,util) {
-	let key = args.KEY;
+     }
+     whenKeyPressedD (args, util){
+          let key = args.KEY;
         // Convert the key arg, if it is a KEY_ID, to the key name used by
         // the Keyboard io module.
         if (SCRATCH_KEY_NAME[args.KEY]) {
@@ -1621,8 +1727,42 @@ class Scratch3MusicBlocks {
         const isDown = util.ioQuery('keyboard', 'getKeyIsDown', [key]);
         return (isDown && this.frameToggle);
      }
+     whenKeyPressedL (args, util){
+         let key = args.KEY;
+        // Convert the key arg, if it is a KEY_ID, to the key name used by
+        // the Keyboard io module.
+        if (SCRATCH_KEY_NAME[args.KEY]) {
+            key = SCRATCH_KEY_NAME[args.KEY];
+        }
+        const isDown = util.ioQuery('keyboard', 'getKeyIsDown', [key]);
+        return (isDown && this.frameToggle);
+
+     }
+     whenKeyPressedR (args, util){
+          let key = args.KEY;
+        // Convert the key arg, if it is a KEY_ID, to the key name used by
+        // the Keyboard io module.
+        if (SCRATCH_KEY_NAME[args.KEY]) {
+            key = SCRATCH_KEY_NAME[args.KEY];
+        }
+        const isDown = util.ioQuery('keyboard', 'getKeyIsDown', [key]);
+        return (isDown && this.frameToggle);
+
+     }
+     whenKeyPressedS (args, util){
+          let key = args.KEY;
+        // Convert the key arg, if it is a KEY_ID, to the key name used by
+        // the Keyboard io module.
+        if (SCRATCH_KEY_NAME[args.KEY]) {
+            key = SCRATCH_KEY_NAME[args.KEY];
+        }
+        const isDown = util.ioQuery('keyboard', 'getKeyIsDown', [key]);
+        return (isDown && this.frameToggle);
+
+     }
 
      
+          
 
 
     /*
@@ -1707,6 +1847,64 @@ class Scratch3MusicBlocks {
 
         return this.sequences[sequenceString].completed;
     }
+
+    /*
+     * Move the character
+     */
+    moveScratchJrF (args, util) {
+        const steps = 20;
+        util.target.setXY(util.target.x + steps, util.target.y);
+    }
+    moveScratchJrB (args, util) {
+        const steps = -20;
+        util.target.setXY(util.target.x + steps, util.target.y);
+    }
+    moveScratchJrU (args, util) {
+        const steps = 20;
+        util.target.setXY(util.target.x, util.target.y + steps);
+    }
+    moveScratchJrD (args, util) {
+        const steps = -20;
+        util.target.setXY(util.target.x, util.target.y+ steps);
+    }
+    rotateScratchJrD (args, util) {
+        const degrees = 15;
+        util.target.setDirection(util.target.direction + degrees);
+    }
+    rotateScratchJrL (args, util) {
+        const degrees = -15;
+        util.target.setDirection(util.target.direction + degrees);
+    }
+    hideScratchJr (args, util) {
+        util.target.setVisible(false);
+    }
+
+
+    
+    /*
+     * Loops
+     */
+    loopScratchJr (args, util) {
+        const times = Math.round(Cast.toNumber(args.TIMES));
+        // Initialize loop
+        if (typeof util.stackFrame.loopCounter === 'undefined') {
+            util.stackFrame.loopCounter = times;
+        }
+        // Only execute once per frame.
+        // When the branch finishes, `repeat` will be executed again and
+        // the second branch will be taken, yielding for the rest of the frame.
+        // Decrease counter
+        util.stackFrame.loopCounter--;
+        // If we still have some left, start the branch.
+        if (util.stackFrame.loopCounter >= 0) {
+            util.startBranch(1, true);
+        }
+    }
+    loopInfScratchJr (args, util) {
+        util.startBranch(1, true);
+    }
+
+
 }
 
 module.exports = Scratch3MusicBlocks;
